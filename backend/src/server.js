@@ -1,0 +1,36 @@
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+import { connectToEmilynBakehouseDB } from "./config/emilynBakehouseDatabase.js";
+import emilynAuthRouter from "./routes/emilynAuth.routes.js";
+import emilynProductRouter from "./routes/emilynProduct.routes.js";
+import emilynCartRouter from "./routes/emilynCart.routes.js";
+import emilynPaymentRouter from "./routes/emilynPayment.routes.js";
+import emilynOrderRouter from "./routes/emilynOrder.routes.js";
+import emilynUserRouter from "./routes/emilynUser.routes.js";
+import emilynAdminAnalyticsRouter from "./routes/emilynAdminAnalytics.routes.js";
+dotenv.config();
+const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.use("/api/emilyn/auth", emilynAuthRouter);
+app.use("/api/emilyn/products", emilynProductRouter);
+app.use("/api/emilyn/cart", emilynCartRouter);
+app.use("/api/emilyn/pay", emilynPaymentRouter);
+app.use("/api/emilyn/orders", emilynOrderRouter);
+app.use("/api/emilyn/users", emilynUserRouter);
+app.use("/api/emilyn/admin", emilynAdminAnalyticsRouter);
+connectToEmilynBakehouseDB();
+app.get("/", (req, res) => {
+  res.send("Hello! Welcome to Emilyn's Bakehouse's Backend API");
+});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
