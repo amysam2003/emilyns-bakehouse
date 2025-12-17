@@ -7,6 +7,10 @@ On the other hand, admin can manage products, see orders and view analytics.
 ## GitHub Repository
 https://github.com/amysam2003/emilyns-bakehouse
 
+## Live Application Deployment
+Frontend (Vercel): https://emilyns-bakehouse.vercel.app/
+Backend (Render): https://emilyns-bakehouse.onrender.com
+
 ## Prerequisites
 Before running the project locally, ensure you have the following installed or available:
 - Node.js (v18+)
@@ -17,6 +21,10 @@ Before running the project locally, ensure you have the following installed or a
 - Git (for version control)
 
 ## Local Setup & Installation
+
+### Clone the Repository
+1. git clone https://github.com/amysam2003/emilyns-bakehouse.git
+2. cd emilyns-bakehouse
 
 ### Backend Setup 
 
@@ -54,9 +62,30 @@ VITE_GOOGLE_MAPS_API_KEY=your_key
 npm run dev
 Frontend will run at: http://localhost:5173
 
-## Production Deployment (LIVE URL)
-Frontend (Vercel): https://emilyns-bakehouse.vercel.app/
-Backend (Render): https://emilyns-bakehouse.onrender.com
+## Production Deployment
+### Frontend (Vercel)
+1. Build the production frontend:
+cd frontend
+npm run build
+
+2. Deploy the /dist folder to Vercel.
+
+3. Set the environment variables on Vercel dashboard:
+VITE_API_URL=https://your-backend-url
+VITE_STRIPE_PUBLISHABLE_KEY=your_live_key
+VITE_GOOGLE_MAPS_API_KEY=your_live_key
+
+### Backend (Render)
+1. Push backend code to GitHub.
+2. Connect Render to GitHub repository and deploy.
+
+3. Configure environment variables on Render dashboard:
+PORT=5000
+JWT_SECRET=your_secret
+MONGO_URI=your_mongodb_uri
+STRIPE_SECRET_KEY=your_live_key
+GOOGLE_MAPS_API_KEY=your_live_key
+Backend is live at: https://emilyns-bakehouse.onrender.com
 
 ## Features
 ### For Customers
