@@ -54,8 +54,8 @@ VITE_GOOGLE_MAPS_API_KEY=your_key
 npm run dev
 Frontend will run at: http://localhost:5173
 
-## Production Deployment
-Frontend (Netlify): https://emilyns-bakehouse.netlify.app/
+## Production Deployment (LIVE URL)
+Frontend (Vercel): https://emilyns-bakehouse.vercel.app/
 Backend (Render): https://emilyns-bakehouse.onrender.com
 
 ## Features
