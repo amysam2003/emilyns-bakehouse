@@ -5,98 +5,100 @@ Emilyn's Bakehouse is a Full-Stack Web-Application (based on MERN) showcasing an
 On the other hand, admin can manage products, see orders and view analytics.
 
 ## GitHub Repository
-[https://github.com/YourUsername/emilyns-bakehouse](https://github.com/YourUsername/emilyns-bakehouse)
+https://github.com/amysam2003/emilyns-bakehouse
 
 ## Prerequisites
-Before running the project locally, ensure the following software and accounts are available:
-Node.js v18+  
-npm or yarn  
-MongoDB Atlas account or local MongoDB server  
-Stripe Developer Account (for test payments)  
-Google Cloud Developer Account (for Maps API)  
-Git (for version control)
+Before running the project locally, ensure you have the following installed or available:
+- Node.js (v18+)
+- npm or yarn
+- MongoDB Atlas account or local MongoDB server
+- Stripe Developer Account (for test payments)
+- Google Cloud Developer Account (for Maps API)
+- Git (for version control)
 
 ## Local Setup & Installation
-### Backend Setup
-1. Navigate to the backend folder:
-```bash
+
+### Backend Setup 
+
+1. Navigate to the backend directory:
 cd backend
-Install dependencies:
+
+2. Install dependencies:
 npm install
 
-Create a .env file in the backend/ directory with:
+3. Create an .env file inside backend/ folder with the following variables:
 PORT=5000
 JWT_SECRET=your_secret
 MONGO_URI=your_mongodb_uri
 STRIPE_SECRET_KEY=your_stripe_key
 GOOGLE_MAPS_API_KEY=your_maps_key
 
-Start the backend server:
+4. Start the backend server:
 npm run dev
-The backend API will run at: http://localhost:5000
+Backend API will run at: http://localhost:5000
 
-Frontend Setup
-Navigate to the frontend folder:
+### Frontend Setup
+
+1. Navigate to the frontend directory:
 cd frontend
 
-Install dependencies:
+2. Install dependencies:
 npm install
 
-Create a .env file in the frontend/ directory with:
+3. Create an .env file inside frontend/ folder with the following variables:
 VITE_API_URL=http://localhost:5000
 VITE_STRIPE_PUBLISHABLE_KEY=your_key
 VITE_GOOGLE_MAPS_API_KEY=your_key
 
-Start the frontend development server:
+4. Start the frontend development server:
 npm run dev
-The frontend will run at: http://localhost:5173
+Frontend will run at: http://localhost:5173
 
-Production Deployment
-Frontend (Netlify): YOUR_NETLIFY_URL
-Backend (Render): YOUR_RENDER_URL
+## Production Deployment
+Frontend (Netlify): https://emilyns-bakehouse.netlify.app/
+Backend (Render): https://emilyns-bakehouse.onrender.com
 
-Features
-For Customer
--Browse bakery products with search, filter, and category sort
--Add/remove/update cart items
--Secure checkout using Stripe Payment API
--View order history and details
--Edit profile and change password
+## Features
+### For Customers
+- Browse bakery products with search, filter, and category sort
+- Add, remove and update items in the cart
+- Secure checkout using Stripe Payment API
+- View order history and its details
+- Edit profile and change password
 
-For Admin
--Add, edit, delete bakery products
--Upload product images
--View analytics (total orders, revenue, registered users)
--Pie chart visual for paid vs pending orders (Chart.js / react-chartjs-2)
+### For Admin
+- Add, edit and delete bakery products
+- Upload product images
+- View analytics which comprises of total orders, revenue, registered users
+- Pie Chart visual for paid vs pending orders (Chart.js / react-chartjs-2)
 
-External APIs
--Stripe Payment API - for secure transactions
--Google Maps API - to display bakery location
+## External APIs and Libraries
+- Stripe Payment API - for secure transactions
+- Google Maps API - to display bakery location
+- Chart.js / react-chartjs-2 - for admin dashboard visual analytics
 
-Chart.js / react-chartjs-2 - for admin dashboard visual analytics
+## Database Schema
+- Database: MongoDB Atlas
+- Collections: Customers, Products, Orders
 
-Database Schema
--Database: MongoDB Atlas
--Collections: Customers, Products, Orders
-
-Relationships:
-Customer => Orders (1-to-many)
+### Relationships:
+Customer => Orders (one-to-many)
 Order => Products (many-to-many via orderItems embedded array)
-Queries: Mongoose populate() and aggregation pipelines
+Queries are handled by Mongoose populate() and aggregation pipelines
 
-Security
--JWT authentication for route protection
--Bcrypt-hashed passwords
--Admin-only routes enforced via middleware
+## Security
+- JWT authentication for route protection
+- Bcrypt-hashed passwords
+- Admin-only routes enforced via middleware
 
-# References
--React
--Node.js
--Express.js
--MongoDB
--Stripe
--Google Maps JS API
--react-chartjs-2
+## References
+- React
+- Node.js
+- Express.js
+- MongoDB
+- Stripe
+- Google Maps JS API
+- react-chartjs-2
 
-Note on Product Images
+## Note on Product Images
 Product images are sourced from Unsplash.com, edited by the author (background removed, sharpened, filtered) to maintain visual consistency.
