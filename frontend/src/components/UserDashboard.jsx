@@ -14,6 +14,7 @@ export default function UserDashboard() {
         <aside className="md:col-span-1 bg-white p-4 rounded shadow">
           <div className="font-semibold text-lg">{user.fullName || "Customer"}</div>
           <div className="text-sm text-gray-500">{user.email}</div>
+          <Link to="/menu" className="block mt-4 text-center bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-semibold shadow">Order Now</Link>
           <nav className="mt-6 space-y-2">
             <Link to="/dashboard/orders" className="block py-2 px-3 rounded hover:bg-gray-100">My Orders</Link>
             <Link to="/dashboard/profile" className="block py-2 px-3 rounded hover:bg-gray-100">My Profile</Link>

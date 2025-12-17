@@ -32,7 +32,7 @@ export default function UserOrders() {
               <div className="text-right">
                 <div className="font-semibold">AED {order.totalPrice.toFixed(2)}</div>
                 <div className="text-sm">{order.isPaid ? "Paid" : "Unpaid"}</div>
-                <Link to={`/dashboard/orders/${order._id}`} className="mt-2 inline-block text-sm text-pink-600">View details</Link>
+                <Link to={`/dashboard/orders/${order._id}`} className={`mt-2 inline-block text-sm ${ order.isPaid? "text-pink-600" : "bg-pink-600 text-white px-3 py-1 rounded"}`}> {order.isPaid ? "View details" : "Order Now"} </Link>
               </div>
             </div>
           </div>

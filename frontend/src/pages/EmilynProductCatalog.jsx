@@ -56,7 +56,7 @@ export default function EmilynProductCatalog() {
           <div className="flex gap-4 text-pink-600 font-medium">
             <Link to="/cart" className="hover:underline">🛒View Cart</Link>
             <Link to="/find-us" className="hover:underline">📍Find Us</Link>
-            {user ? <span>𖨆 {user.fullName}</span> : <Link to="/dashboard" className="hover:underline">𖨆My Account</Link>}
+            {user ? (<Link to="/dashboard" className="hover:underline font-semibold">𖨆 {user.fullName} </Link>) : ( <Link to="/dashboard" className="hover:underline"> 𖨆 My Account </Link>)}
           </div>
         </div>
         <EmilynSearchFilter

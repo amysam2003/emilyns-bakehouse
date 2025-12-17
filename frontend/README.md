@@ -54,9 +54,15 @@ VITE_GOOGLE_MAPS_API_KEY=your_key
 npm run dev
 Frontend will run at: http://localhost:5173
 
+<<<<<<< HEAD
 ## Production Deployment (LIVE URL)
 Frontend (Vercel): https://emilyns-bakehouse.vercel.app/
 Backend (Render): https://emilyns-bakehouse.onrender.com
+=======
+## Production Deployment
+Frontend (Netlify): YOUR_NETLIFY_URL
+Backend (Render): YOUR_RENDER_URL
+>>>>>>> d9269dd (Add Order Now button to user dashboard)
 
 ## Features
 ### For Customers
@@ -101,4 +107,8 @@ Queries are handled by Mongoose populate() and aggregation pipelines
 - react-chartjs-2
 
 ## Note on Product Images
+<<<<<<< HEAD
 Product images are sourced from Unsplash.com, edited by the author (background removed, sharpened, filtered) to maintain visual consistency.
+=======
+Product images are sourced from Unsplash.com, edited by the author (background removed, sharpened, filtered) to maintain visual consistency.
+>>>>>>> d9269dd (Add Order Now button to user dashboard)

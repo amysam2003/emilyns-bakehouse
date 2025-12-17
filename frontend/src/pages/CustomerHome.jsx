@@ -10,7 +10,7 @@ export default function CustomerHome() {
         </Link>
         <h1 className="text-5xl font-extrabold text-pink-700 mb-4">Welcome to Emilyn’s Bakehouse!</h1>
         <p className="text-xl text-gray-700 mb-8">Freshly Baked Delights - Cakes, Pastries, Buns & More Delivered with Love!</p>
-        <Link to="/menu" className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition">View Our Bakery Menu</Link>
+                <Link to="/menu" className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition"> Order Now </Link>
       </div>
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <Link to="/cart" className={cardClass}>
@@ -28,7 +28,7 @@ export default function CustomerHome() {
       </div>
       <div className="bg-pink-100 py-12 text-center mt-12">
         <h2 className="text-3xl font-bold text-pink-700 mb-4">Hurray! Ready to Treat Yourself?</h2>
-        <Link to="/menu" className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow">Explore Our Bakery</Link>
+        <Link to="/menu" className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition"> Order Now </Link>
       </div>
     </div>
   );
